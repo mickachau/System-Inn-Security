@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    color: #fff;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #081b29;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    transition: all 0.2s ease;
+}
+::-webkit-input-placeholder{
+    color: #eee;
+}
+
+/*Estilos para el contenedor principal, el cual aborda los formularios*/
+.wrapper{
+    padding: 40px 0;
+    display: flex;
+    width: 800px;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 50px 0 #00a6bc;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+/*Se posiciona el formulario*/
+.form {
+    position: relative;
+    left: 50px;
+}
+
+/*Se posicionan los botones del menu principal*/
+.wrapper__menu{
+    position: relative;
+    left: 50px;
+}
+
+/*Estilos para los input del menu de loguin para ingresar credenciales*/
+.input{
+    border: none;
+    border-bottom: solid 1px #eee;
+    outline: none;
+    background: none;
+    width: 260px;
+    padding: 7px 3px;
+    font-size: 17px;
+    color: #0ef;
+    margin-bottom: 30px;
+}
+
+/*Estilos para los input de los formularios donde registrar usuarios y visitantes*/
+.controls{
+    width: 260px;
+    background: #182736;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #00a6bc;
+    border-radius: 2px;
+    font-family: arial;
+    font-size: 18px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+/*Estilos para los label del menu de informes*/
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+/*Estilos para el boton de regreso de los menú*/
+.wrapper__menu-submit{
+    margin-bottom: 15px;
+}
+
+/*Estilos para el texto dentro de los input*/
+::placeholder{
+    color: #aaa;
+}
+
+/*Estilos para los botones de toda la pagina*/
+.submit{
+    border: none;
+    outline: none;
+    width: 288px;
+    margin-top: 15px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #0ef, #c800ff);
+}
+
+/*Estilos para los links de regreso*/
+.footer{
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/*Estilos para el div, donde se aloja el link de regreso del menu de consultas, para ubicarlo correctamente*/
+.footer__menu-consultas{
+    position: absolute;
+    left: 30%;
+    bottom: 75px;
+}
+
+/*Estilos para los subtitulos de cada pagina*/
+.title{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/*Estilos para el banner, el cual menciona el equipo SIS*/
+.banner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+    background: linear-gradient(to right, #0ef, #c800ff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%,50% 100%);
+    padding-right: 70px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*Estilos para enunciados del banner*/
+.wel_text{
+    font-size: 40px;
+    margin-top: -50px;
+    line-height: 50px;
+}
+
+.para{
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+/*Estilos para el logotipo del sistema*/
+img{
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    padding: 9px 0;
+}
+
+/*Estilos para un correcto acceso o una falla, succes y error*/
+.success{
+    position: absolute;
+    top: 50px;
+    color: #00c836;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.error{
+    position: absolute;
+    top: 50px;
+    color: #e02d00;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.copyright{
+    margin-top: 10px;
+}
+
+/**Estilos par las tablas*/
+
+.container__table {
+    margin: 0 530px 0 0;
+    width: 780px;
+    height: 65vh;
+    /* background: linear-gradient(#0B3861, #0B243B); */
+    background-color:#0B243B ;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 50px 0 #00a6bc;
+    padding: 10px;
+    overflow: auto;
+}
+
+table {
+    width: 99%;
+    margin: auto;
+    border: 3px solid #9a2efe;
+    box-shadow: 0 0 10px 0 #9a2efe;
+    text-align: center;
+}
+
+td {
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #555
+}
+
+th {
+    margin: 5px;
+    padding: 5px 0;
+
+}
+
+
+/*TODO -------------------------------------MODO CLARO--------------------------------------------*/
+
+/**Personalizacion botones de modo claro*/
+
+.light__mode{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.switch{
+    width: 35px;
+    height: 18px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+    border: #333 solid 2px;
+    background-color: #081b29;
+}
+
+.switch i {
+    font-size: 1rem;
+    color: #fdc21c;
+}
+
+.switch::before{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #aaa;
+    border: solid thin #000;
+    left: 0;
+    right: unset;
+}
+
+.switch.active::before{
+    right: 1.7px;
+    left: unset;
+    border: solid thin #fff;
+}
+
+/**Personalizacion de todo el modo claro*/
+
+.switch i:last-child{
+    color: #fff;
+}
+
+body.active{
+    background-color: #ddd;
+}
+
+body.active .wrapper{
+    background-color: #ccc;
+}
+
+body.active .wrapper .input{
+    border-bottom: solid 1px #222;
+    color: #058;
+}
+
+body.active h2{
+    color: #222;
+}
+
+body.active .footer{
+    color: #222;
+}
+
+body.active .footer .link{
+    color: #02a;
+}
+
+body.active .copyright{
+    color: #222;
+}
+
+body.active ::placeholder{
+    color: #444;
+}
+
+body.active .submit{
+    color: #222;
+}
+
+body.active .submit:hover{
+    color: #ddd;
+}
+
+body.active .controls {
+    background-color: #aaa;
+    color: #222;
+}
+
+body.active .fa-envelope{
+    color: #000;
+}
+
+body.active .fa-user{
+    color: #000;
+}
+
+body.active .fa-lock{
+    color: #000;
+}
+
+body.active .fa-id-card{
+    color: #000;
+}
+
+body.active .fa-hashtag{
+    color: #000;
+}
+
+body.active .container__table{
+    background-color: #ccc;
+}
+
+body.active th, td, tr{
+    color: #000;
+}
+
+body.active tr td a{
+    color: #02a;
+}
+
+body.active .fa-location-dot{
+    color: #000;
+}
+
+body.active .fa-car{
+    color: #000;
+}
+
+body.active .fa-dog{
+    color: #000;
+}
+
+body.active label{
+    color: #222;
+}
+
+body.active select option{
+    color: #222;
+}
